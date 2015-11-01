@@ -1,5 +1,6 @@
 package com.alan.demo;
 
+import com.alan.demo.resources.WordReverseResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -17,13 +18,14 @@ public class WordReverseApplication extends Application<WordReverseConfiguration
 
     @Override
     public void initialize(final Bootstrap<WordReverseConfiguration> bootstrap) {
-        // TODO: application initialization
+
     }
 
     @Override
     public void run(final WordReverseConfiguration configuration,
                     final Environment environment) {
-        // TODO: implement application
+        final String defaultWord = configuration.getDefaultWord();
+        environment.jersey().register(new WordReverseResource(defaultWord));
     }
 
 }

@@ -1,10 +1,18 @@
 package com.alan.demo;
 
-import io.dropwizard.Configuration;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.hibernate.validator.constraints.*;
-import javax.validation.constraints.*;
+import io.dropwizard.Configuration;
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class WordReverseConfiguration extends Configuration {
-    // TODO: implement service configuration
+
+    @NotEmpty
+    @JsonProperty
+    private String defaultWord = "Izea";
+
+
+    public String getDefaultWord(){
+        return defaultWord;
+    }
+
 }

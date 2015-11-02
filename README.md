@@ -1,6 +1,6 @@
 # Reverse Word
 
-Reverse-Word is a web-service that 'droW-esreveR'
+Reverse-Word is a web-service that 'droW-esreveR' using [Dropwizard] [PO].
 ### Version
 1.0-SNAPSHOT.
 
@@ -58,3 +58,4 @@ $ curl "http://{Docker IP}:8080/word?term=Test"
 ```
 
    [PlDb]: <https://docs.docker.com/installation/>
+   [PO]: <http://www.dropwizard.io/0.9.0/docs/>
